@@ -46,7 +46,7 @@ namespace Laba_9_OAIP_NEW
             }
         }
 
-       
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -63,7 +63,7 @@ namespace Laba_9_OAIP_NEW
 
         }
 
-       
+
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
