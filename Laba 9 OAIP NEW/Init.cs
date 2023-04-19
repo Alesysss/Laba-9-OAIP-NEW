@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Laba_9_OAIP_NEW
 {
-    internal class Init
+    public static class Init
     {
+        public static Bitmap bitmap;
+        public static PictureBox pictureBox;
+        public static Pen pen;
+
     }
 }

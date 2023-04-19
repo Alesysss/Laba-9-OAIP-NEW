@@ -62,6 +62,7 @@
             textBox1.Size = new Size(361, 27);
             textBox1.TabIndex = 2;
             textBox1.TextChanged += textBox1_TextChanged;
+            textBox1.KeyDown += textBox1_KeyDown;
             // 
             // listBox1
             // 
