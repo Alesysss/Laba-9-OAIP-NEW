@@ -12,7 +12,7 @@ namespace Laba_9_OAIP_NEW
 {
     abstract public class Figure
     {
-        public string Name { get; set; }
+        public string Name;
         public int x;
         public int y;
         public int w;
