@@ -6,5 +6,10 @@ namespace Laba_9_OAIP_NEW
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
