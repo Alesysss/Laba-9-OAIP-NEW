@@ -67,7 +67,7 @@ namespace Laba_9_OAIP_NEW
                 int x2 = Convert.ToInt32(Convert.ToString(operands.Pop().value));
                 int y1 = Convert.ToInt32(Convert.ToString(operands.Pop().value));
                 int x1 = Convert.ToInt32(Convert.ToString(operands.Pop().value));
-               string Name1 = Convert.ToString(operands.Pop().value);
+                var Name1 = Convert.ToString(operands.Pop().value);
 
                 if (x1 >= Init.pictureBox.Width || y1 >= Init.pictureBox.Height
                                 || x2 >= Init.pictureBox.Width || y2 >= Init.pictureBox.Height
@@ -86,7 +86,7 @@ namespace Laba_9_OAIP_NEW
 
                 if (textBox1.Text[0] == 'T')
                 {
-                   string Name11 = Convert.ToString(operands.Pop().value);
+                    string Name11 = Convert.ToString(operands.Pop().value);
                     string Name = Convert.ToString(operands.Pop().value);
                     ShapeContainer.figurelist.Add(figure);
                     figure.Draw();
@@ -98,7 +98,7 @@ namespace Laba_9_OAIP_NEW
 
                 if (textBox1.Text[0] == 'D')
                 {
-                    string Name = Convert.ToString(operands.Pop().value);
+                    var Name = Convert.ToString(operands.Pop().value);
                     string deletename = "удалили фигуру " + Name + "\n";
                     if (ShapeContainer.FindFigure(Name) == null)
                     {
@@ -119,8 +119,8 @@ namespace Laba_9_OAIP_NEW
         {
             if (e.KeyCode == Keys.Enter)
             {
-                //operators = new Stack<Operator>();
-               // operands = new Stack<Operand>();
+                operators = new Stack<Operator>();
+                 operands = new Stack<Operand>();
                 for (int i = 0; i < textBox1.Text.Length; i++)
                 {
                     if (IsNotOperation(textBox1.Text[i]))
@@ -189,17 +189,18 @@ namespace Laba_9_OAIP_NEW
                             }
                         }
                         while (operators.Peek().symbolOperator != '(');
-                    }
-                }
 
-                operators.Peek();
+
+
+
+                    }
+                    SelectingPerformingOperation(operators.Peek());
+                }
 
 
             }
 
-            
-        }
 
-        
+        }
     }
 }
