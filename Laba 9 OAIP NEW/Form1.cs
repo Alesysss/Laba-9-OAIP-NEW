@@ -194,10 +194,11 @@ namespace Laba_9_OAIP_NEW
 
 
                     }
-                    SelectingPerformingOperation(operators.Peek());
+                    
                 }
 
-
+                SelectingPerformingOperation(operators.Peek());
+                //опнакелю!!!!!
             }
 
 
