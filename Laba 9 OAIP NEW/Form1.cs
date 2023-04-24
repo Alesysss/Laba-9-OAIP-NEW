@@ -11,6 +11,7 @@ namespace Laba_9_OAIP_NEW
             Pen pen = new Pen(Color.Pink, 1);
             Init.bitmap = bitmap;
             Init.pen = pen;
+            Init.pictureBox = pictureBox1; //упустили
         }
         private Stack<Operator> operators = new Stack<Operator>();
         private Stack<Operand> operands = new Stack<Operand>();
@@ -83,36 +84,38 @@ namespace Laba_9_OAIP_NEW
                     pointFs[2].Y = y3;
                     listBox1.Items.Add(Name1 + " создан массив точек");
                 }
-
-                if (textBox1.Text[0] == 'T')
-                {
-                    string Name11 = Convert.ToString(operands.Pop().value);
-                    string Name = Convert.ToString(operands.Pop().value);
-                    ShapeContainer.figurelist.Add(figure);
-                    figure.Draw();
-                    ShapeContainer.AddFigure(figure);
-                    listBox1.Items.Add(Name + " Треугольник успешно нарисован");
-                }
-
-
-
-                if (textBox1.Text[0] == 'D')
-                {
-                    var Name = Convert.ToString(operands.Pop().value);
-                    string deletename = "удалили фигуру " + Name + "\n";
-                    if (ShapeContainer.FindFigure(Name) == null)
-                    {
-                        listBox1.Text += "Ошибка в данных\n";
-                    }
-                    else
-                    {
-                        ShapeContainer.FindFigure(Name).DeleteF(ShapeContainer.FindFigure(Name), true);
-                        listBox1.Text += ShapeContainer.FindFigure(Name) + deletename;
-                    }
-                }
-
-
             }
+
+            if (textBox1.Text[0] == 'T')
+            {
+                string Name11 = Convert.ToString(operands.Pop().value);
+                string Name = Convert.ToString(operands.Pop().value);
+                ShapeContainer.figurelist.Add(figure);
+                figure = new Triangle(pointFs);
+                figure.Draw();
+                ShapeContainer.AddFigure(figure);
+                listBox1.Items.Add(Name + " Треугольник успешно нарисован");
+            }
+
+
+
+            if (textBox1.Text[0] == 'D')
+            {
+                var Name = Convert.ToString(operands.Pop().value);
+                string deletename = "удалили фигуру " + Name + "\n";
+                if (ShapeContainer.FindFigure(Name) == null)
+                {
+                    listBox1.Text += "Ошибка в данных\n";
+                }
+                else
+                {
+                    ShapeContainer.FindFigure(Name).DeleteF(ShapeContainer.FindFigure(Name), true);
+                    listBox1.Text += ShapeContainer.FindFigure(Name) + deletename;
+                }
+            }
+
+
+            //промахнулись с закрытием скобки, то есть все, что было выше, относилось к if (textBox1.Text[0] == 'A')
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
@@ -120,7 +123,7 @@ namespace Laba_9_OAIP_NEW
             if (e.KeyCode == Keys.Enter)
             {
                 operators = new Stack<Operator>();
-                 operands = new Stack<Operand>();
+                operands = new Stack<Operand>();
                 for (int i = 0; i < textBox1.Text.Length; i++)
                 {
                     if (IsNotOperation(textBox1.Text[i]))
@@ -194,7 +197,7 @@ namespace Laba_9_OAIP_NEW
 
 
                     }
-                    
+
                 }
 
                 SelectingPerformingOperation(operators.Peek());

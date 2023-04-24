@@ -36,9 +36,9 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             groupBox1 = new GroupBox();
-            label2 = new Label();
-            label3 = new Label();
             label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
@@ -52,9 +52,10 @@
             // pictureBox
             // 
             pictureBox.BackColor = Color.White;
-            pictureBox.Location = new Point(120, 190);
+            pictureBox.Location = new Point(180, 285);
+            pictureBox.Margin = new Padding(4, 4, 4, 4);
             pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(671, 462);
+            pictureBox.Size = new Size(1006, 693);
             pictureBox.TabIndex = 0;
             pictureBox.TabStop = false;
             pictureBox.Click += pictureBox_Click;
@@ -65,18 +66,20 @@
             label1.BackColor = Color.MistyRose;
             label1.Font = new Font("Impact", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Maroon;
-            label1.Location = new Point(12, 9);
+            label1.Location = new Point(18, 14);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(258, 37);
+            label1.Size = new Size(359, 52);
             label1.TabIndex = 1;
             label1.Text = "Командная строка";
             // 
             // textBox1
             // 
             textBox1.BackColor = Color.LightCoral;
-            textBox1.Location = new Point(12, 62);
+            textBox1.Location = new Point(18, 93);
+            textBox1.Margin = new Padding(4, 4, 4, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(842, 27);
+            textBox1.Size = new Size(1261, 35);
             textBox1.TabIndex = 2;
             textBox1.TextChanged += textBox1_TextChanged;
             textBox1.KeyDown += textBox1_KeyDown;
@@ -84,28 +87,31 @@
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 20;
-            listBox1.Location = new Point(1097, 344);
+            listBox1.ItemHeight = 30;
+            listBox1.Location = new Point(1646, 516);
+            listBox1.Margin = new Padding(4, 4, 4, 4);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(315, 104);
+            listBox1.Size = new Size(470, 154);
             listBox1.TabIndex = 3;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(3, 113);
+            pictureBox1.Location = new Point(-7, 151);
+            pictureBox1.Margin = new Padding(4, 4, 4, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(805, 606);
+            pictureBox1.Size = new Size(1208, 909);
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1035, 266);
+            pictureBox2.Location = new Point(1552, 399);
+            pictureBox2.Margin = new Padding(4, 4, 4, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(453, 412);
+            pictureBox2.Size = new Size(680, 618);
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
             // 
@@ -117,67 +123,74 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Impact", 18F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox1.ForeColor = Color.Maroon;
-            groupBox1.Location = new Point(989, 62);
+            groupBox1.Location = new Point(1484, 93);
+            groupBox1.Margin = new Padding(4, 4, 4, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(499, 188);
+            groupBox1.Padding = new Padding(4, 4, 4, 4);
+            groupBox1.Size = new Size(748, 282);
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
             groupBox1.Text = "Допустимые команды";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Impact", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(13, 61);
-            label2.Name = "label2";
-            label2.Size = new Size(483, 29);
-            label2.TabIndex = 0;
-            label2.Text = "A(m,x1,y1,x2,y2,x3,y3) - создание массива точек";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Impact", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(13, 102);
-            label3.Name = "label3";
-            label3.Size = new Size(332, 29);
-            label3.TabIndex = 1;
-            label3.Text = "T(t,m) - создание треугольника";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Impact", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(13, 141);
+            label4.Location = new Point(20, 212);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(310, 29);
+            label4.Size = new Size(433, 41);
             label4.TabIndex = 2;
             label4.Text = "D(t) - удаление треугольника";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Impact", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(20, 153);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(461, 41);
+            label3.TabIndex = 1;
+            label3.Text = "T(t,m) - создание треугольника";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Impact", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(20, 92);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(677, 41);
+            label2.TabIndex = 0;
+            label2.Text = "A(m,x1,y1,x2,y2,x3,y3) - создание массива точек";
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(806, 454);
+            pictureBox3.Location = new Point(1209, 681);
+            pictureBox3.Margin = new Padding(4, 4, 4, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(223, 319);
+            pictureBox3.Size = new Size(334, 478);
             pictureBox3.TabIndex = 7;
             pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(855, 301);
+            pictureBox4.Location = new Point(1282, 452);
+            pictureBox4.Margin = new Padding(4, 4, 4, 4);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(178, 147);
+            pictureBox4.Size = new Size(267, 220);
             pictureBox4.TabIndex = 8;
             pictureBox4.TabStop = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
-            ClientSize = new Size(1532, 704);
+            ClientSize = new Size(2298, 1056);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(groupBox1);
@@ -187,6 +200,7 @@
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(pictureBox);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
