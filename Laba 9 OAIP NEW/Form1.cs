@@ -6,7 +6,7 @@ namespace Laba_9_OAIP_NEW
         public Form1()
         {
             InitializeComponent();
-            InitializeComponent();
+            //корень всех ваших проблем
             Bitmap bitmap = new Bitmap(pictureBox.ClientSize.Width, pictureBox.ClientSize.Height);
             Pen pen = new Pen(Color.Pink, 1);
             Init.bitmap = bitmap;
